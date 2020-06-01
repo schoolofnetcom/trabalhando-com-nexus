@@ -1,0 +1,8 @@
+tar -cvf - infra/manifests/ | gzip > manifests.tar.gz
+                     curl -v -u admin:claroflex --upload-file manifests.tar.gz http://nexus-service/repository/kubernetes/
+ curl -v -u admin:schoolofnet --upload-file artifacts.tar.gz http://68.183.131.155:8081/repository/artefatos/
+
+wget http://admin:claroflex@68.183.131.155:8081/repository/artefatos/artefatos.tar.gz
+
+
+http://68.183.131.155:8081/repository/artefatos/
